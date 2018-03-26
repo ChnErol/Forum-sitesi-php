@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Forum Script</title>
+	<style>
+.resim{
+margin-left:20px;
+margin-right:50px;
+float:left;
+width:50px;
+height:50px;
+background-color:red;
+}
+.yorum{
+padding-top:10px;
+padding-bottom:10px;
+float:left;
+width:100%;
+background-color:#708090;
+margin-bottom:2px;
+}
+.yazi{
+font-size:10px;
+color:white;
+margin-left:80px;
+margin-top:10px;
+}
+.buton{
+margin-left:4px;
+font-size:10px;
+}
+.bilgi{
+margin-top:20px;
+width:20%;
+height:20px;
+font-size:8px;
+padding-left:8px;
+color:white;
+}
+.sikayet{
+font-size:9px;
+float:right;
+}
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <!--munu-->
+      <div class="row menu center">
+        <div class="col-md-2">Logo</div>
+        <div class="col-md-4">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="ARA" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">Ara</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1">AnaSayfa</div>
+        <div class="col-md-1">Forum</div>
+        <div class="col-md-1">Blog</div>
+        <div class="col-md-1">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Giriş
+            </button>
+            <div class="dropdown-menu">
+              <div class="dropdown-item">
+                <form class="px-4 py-3">
+                  <div class="form-group">
+                    <label for="exampleDropdownFormEmail1">Mail Adresiniz</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleDropdownFormPassword1">Şifre</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Şifre">
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                    <label class="form-check-label" for="dropdownCheck">
+                      Beni Hatırla
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Giriş</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Yeni kayıt</a>
+                <a class="dropdown-item" href="#">Şifremi unuttum</a>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!--icerik-->
+       <div class="row icerik">
+        <div class="col-md-12">
+           <div class="panel-group" id="accordion">
+            <div class="yorum">
+<div class="resim">
+<img src="no.jpg">
+</div>
+<button class="sikayet" id="yorumgonder" class="gbtnTertiary" onclick="comments('g',this)">Şikayet Et</button>
+<div class="yazi">
+<p>Lorem Ipsum, dizgi ve baskı endüstrisinde Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.</p>
+</div>
+<button class="buton" id="yorumgonder" class="gbtnTertiary" onclick="comments('g',this)">Teşekkür Et</button>
+<div class="bilgi">
+Yorum yapan 
+</div>
+
+</div>
+<div class="yorum">
+<div class="resim">
+<img src="no.jpg">
+</div>
+<button class="sikayet" id="yorumgonder" class="gbtnTertiary" onclick="comments('g',this)">Şikayet Et</button>
+<div class="yazi">
+<p>Lorem Ipsum, dizgi ve baskı endüstrisinde Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.</p>
+</div>
+<button class="buton" id="yorumgonder" class="gbtnTertiary" onclick="comments('g',this)">Teşekkür Et</button>
+<div class="bilgi">
+Yorum yapan 
+</div>
+
+</div>
+
+  <form>
+    <div class="form-group">
+      <label for="comment">Yorum Yap:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+  </form>
+  <button id="yorumgonder" class="gbtnTertiary" onclick="comments('g',this)">Yorumu Gönder</button>
+</div>
+              <div id="collapse3" class="panel-collapse collapse in">
+                <div class="panel-body row">
+                  <div class="col-md-8">
+                    <div class="row kategori-baslik">Başlık</div>
+                    <div class="row kategori-aciklama">Acıklama</div>
+                  
+                  </div>
+                  <div class="col-md-2">
+                    <div class="row">Başlık:12596</div>
+                    <div class="row">Mesaj:123654466</div>
+                  </div>
+                  <div class="col-md-2">En son mesaj:20 dk</div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+       <!--footer-->
+       <div class="row footer">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          Thema: ALİ UMUTCAN KUL AND CİHAN EROL MART 2018
+        </div>
+        <div class="col-md-4">
+        </div>
+       </div>
+       
+    
+    </div>
+  </body>
+</html>
